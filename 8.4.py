@@ -49,3 +49,5 @@ ax.spines["left"].set_position(("data", 0))
 ax.xaxis.set_ticks_position("bottom")
 ax.yaxis.set_ticks_position("left")
 plt.show()
+
+plt.savefig('1.fig')
