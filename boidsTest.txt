@@ -1,6 +1,0 @@
-weight,height (640, 480)
-数量N 50
-速度velFix 2.0
-噪声noise 0.2
-避免碰撞距离minDist 15
-内聚距离maxDist 55
