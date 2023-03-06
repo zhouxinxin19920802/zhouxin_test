@@ -1,13 +1,16 @@
 # -*- coding: utf-8 -*-
 # @Author  : zhouxin
 # @Time    : 2023/3/4 10:07
-# @File    : 8.4.py
+# @File    : fuck.py
 # @annotation    :
 
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
+
+def testddd():
+    print("a")
 
 
 mpl.rcParams["font.sans-serif"] = ["SimHei"]
