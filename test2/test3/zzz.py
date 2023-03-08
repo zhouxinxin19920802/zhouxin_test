@@ -14,3 +14,6 @@ def data_read(shape_data, data):
     for line in open(shape_data, "r", encoding="utf-8"):
         line = line.strip("\n")
         data_shape_after.append(float(line))
+    with open(data, "r", encoding="utf-8") as f:
+        lines = f.readlines()
+        times_stable = int(float(lines[0].strip("\n")))
