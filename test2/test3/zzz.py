@@ -19,3 +19,4 @@ def data_read(shape_data, data):
         times_stable = int(float(lines[0].strip("\n")))
     times_start = 450
     data_resilience = data_shape_after[times_start: times_stable + 100]
+    data_resilience_sg = sg(data_resilience, window_length=25, polyorder=1)
