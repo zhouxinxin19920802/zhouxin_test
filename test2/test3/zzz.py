@@ -32,3 +32,4 @@ def data_read(shape_data, data):
     7
     8
     9
+    10
