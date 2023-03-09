@@ -29,3 +29,4 @@ def data_read(shape_data, data):
     4
     5
     6
+    7
