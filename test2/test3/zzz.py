@@ -18,5 +18,7 @@ def data_read(shape_data, data):
         lines = f.readlines()
         times_stable = int(float(lines[0].strip("\n")))
     return data11111_shape_afteryyy
-    kkkkkkkkkkkkk
-    iiiiiiiiiiiiiii
+    import matplotlib.pyplot as plt
+    import numpy as np
+
+    ax = plt.axes(projection='3d')
