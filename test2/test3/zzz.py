@@ -17,4 +17,4 @@ def data_read(shape_data, data):
     with open(data, "r", encoding="utf-8") as f:
         lines = f.readlines()
         times_stable = int(float(lines[0].strip("\n")))
-    return data11111_shape_after
+    return data11111_shape_afteryyy
