@@ -25,3 +25,4 @@ def data_read(shape_data, data):
     aaaaaaaa
     1
     2
+    3
