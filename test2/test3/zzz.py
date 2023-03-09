@@ -22,4 +22,4 @@ def data_read(shape_data, data):
     import numpy as np
 
     ax = plt.axes(projection='3d')
-    eeeeeee
+    aaaaaaaa
