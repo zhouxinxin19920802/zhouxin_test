@@ -3,8 +3,6 @@ import math
 import os
 
 
-import numpy
-
 
 print("jja")
 
