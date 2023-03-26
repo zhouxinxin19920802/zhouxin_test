@@ -1,3 +1,2 @@
 # zhouxin_test
-github功能的练习探索
-这也是个测试
+测试仓库，用于学习和测试github各种功能
