@@ -6,5 +6,7 @@
 # 常用git命令
   * git fetch git reset --hard origin/master 
      - 使用场景：自己多台设备之间同步，由于仓库内可能有一些非git可以比较差异的内容，如anylogic的数据，当在另一台设备中进行了仿真，改变了数据，git pull会失败，此时就必须用远程仓库强制覆盖本地仓库。首先进行git fetch获取远程仓库，然后git checkout 本地分支，执行git reset --hard origin/master，就可用远程分支强制覆盖本地分支。
+  * git pull git push
+     - push之前要首先git pull获取远程仓库最新更新，进行合并或冲突解决，再进行远程推送git push。
 
 # 常用github用法
