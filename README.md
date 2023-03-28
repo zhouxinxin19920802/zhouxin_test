@@ -11,8 +11,8 @@
 
 # 2.常用github用法
 ----------
-2.1 ![github快捷键](https://img-blog.csdnimg.cn/d1e55767a7fa432c9d721dbe54b07851.png)
-在项目里.可以直接打开编辑器,T可以快速查找文件，L可以快速定位行,B可以快速查看源码修改记录。
+![github快捷键](https://img-blog.csdnimg.cn/d1e55767a7fa432c9d721dbe54b07851.png)
+2.1 在项目里.可以直接打开编辑器,T可以快速查找文件，L可以快速定位行,B可以快速查看源码修改记录。
 
 2.2 在项目中，项目地址前加"https://gitpod.io/#/" + 项目地址可以调用在线编辑器运行。
 
