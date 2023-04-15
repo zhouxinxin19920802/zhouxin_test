@@ -21,5 +21,7 @@
 
 2.4 特别注意 **?** 的使用，**?** 可以快速调出快捷键的使用帮助。
 
+2.5 sync fork命令, 对于一个forked的项目，进入自己仓库的fork的项目中，点击sync fork，可与原项目保持同步，从而阅读最新状态的项目。
+
 # 3.github学习资料
 3.1 [github漫游指南](https://github.phodal.com/#/chapter/Github%E6%BC%AB%E6%B8%B8%E6%8C%87%E5%8D%97)
