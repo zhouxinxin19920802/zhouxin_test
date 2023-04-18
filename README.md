@@ -23,6 +23,8 @@
 
 2.5 sync fork命令, 对于一个forked的项目，进入自己仓库的fork的项目中，点击sync fork，可与原项目保持同步，从而阅读最新状态的项目。
 
+2.6 git stash是必要的，因为开发本地开发的时候，是不确定远程基底是否发生更改的，但此时本地的开发的的代码又不可能放弃掉，因此需要用git stash存起来，先解决冲突将本地更新和远程一样，再进一步将stash的代码和本地代码合并。然后再进行push.
+
 # 3 git出现冲突的情况
 Git 通常在以下情况下会出现冲突：
 
@@ -38,5 +40,5 @@ Git 通常在以下情况下会出现冲突：
 > ---------------------------
 > 冲突的根本在于基底发生了变化，所以单人单分支操作的话，往往是不会发生冲突的
 
-# 3.github学习资料
-3.1 [github漫游指南](https://github.phodal.com/#/chapter/Github%E6%BC%AB%E6%B8%B8%E6%8C%87%E5%8D%97)
+# 4.github学习资料
+4.1 [github漫游指南](https://github.phodal.com/#/chapter/Github%E6%BC%AB%E6%B8%B8%E6%8C%87%E5%8D%97)
