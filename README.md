@@ -34,6 +34,10 @@ Git 通常在以下情况下会出现冲突：
 
 3.同时修改多个文件时：如果多个人在同一时间对同一个文件夹中的多个文件进行修改，就会出现冲突。
 
+4.本地工作区存在未暂存的修改时，git pull也会报错，因为git pull会同时更新版本库和工作区，工作区未暂存或者提交的话，工作区会被覆盖，因此会报错，报错的提示为:
+>error: Your local changes to the following files would be overwritten by merge:pom.xml,Please commit your changes or stash them before you merge.
+> 
+
 > 可以看出冲突往往发生在不同分支上，或者同一分支不同操作
 > * 不同分支的情况，例如原来版本为a，A拉取修改a+b变成了c,此时分支C, B拉取a+d变成了e，此时分支为D，此时分支C和D合并就会出现冲突，因为基底已经发生了变化
 > * 想同分支的情况，例如原来版本为a，A拉取修改a+b变成了c，B拉取a+d变成了e，B上传，需要首先进行git pull，因为基底发生了变化，所以会发生冲突
