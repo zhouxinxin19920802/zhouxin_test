@@ -37,9 +37,7 @@ Git 通常在以下情况下会出现冲突：
 4.本地工作区存在未暂存的修改时，git pull也会报错，因为git pull会同时更新版本库和工作区，工作区未暂存或者提交的话，工作区会被覆盖，因此会报错，报错的提示为:
 >error: Your local changes to the following files would be overwritten by merge:pom.xml,Please commit your changes or stash them before you merge.
 
->    <<<<<<<
->    =======
->    >>>>>>>
+>    <<<<<<< ======= >>>>>>>
 >    <<<<<<<和=======之间的所有内容都是你的本地修改。 这些修改还没有在远程版本库中。=======和>>>>>>>之间的所有行都是来自远程版本库或另一个分支的修改。
 
 > 可以看出冲突往往发生在不同分支上，或者同一分支不同操作
