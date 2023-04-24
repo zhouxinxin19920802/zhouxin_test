@@ -10,7 +10,7 @@ dll = ctypes.CDLL('test.dll',winmode=0) #加载动态链接库
 f=dll.add #提取函数
 f.argtypes=[ctypes.c_double,ctypes.c_double] #定义参数类型
 f.restype=ctypes.c_double #定义函数返回值类型
-cons = f(2.5,3.5) #计
+cons = f(2.5,3.5) #计算
 print(cons)
 ```
 
