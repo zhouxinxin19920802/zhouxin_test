@@ -3,7 +3,7 @@
 -------------------
 ![python图灵书单](./img/python图灵书单.png)
 
-1. python通过MingW调用C/C++, 编写C/C++,用gcc或者g++调用生成dll文件，通过ctypes包进行调用，代码示例如下:
+#### 1. python通过MingW调用C/C++, 编写C/C++,用gcc或者g++调用生成dll文件，通过ctypes包进行调用，代码示例如下:
 python代码:
 ``` python
 import ctypes
