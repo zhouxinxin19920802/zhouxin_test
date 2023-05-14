@@ -3,7 +3,6 @@ import math
 import os
 
 
-
-print("test")
-print("jca")
-print("hhh")
+import os
+names = os.listdir('.')
+print(names)
