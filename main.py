@@ -1,8 +1,10 @@
 # coding: utf-8
-import math
-import os
 
+#!/usr/bin/env python3
+import importlib
+math = importlib.import_module('math')
+print(math.sin(2))
 
-import os
-names = os.listdir('.')
-print(names)
+mod = importlib.import_module('urllib.request')
+u = mod.urlopen('http://www.python.org')
+print(u)
