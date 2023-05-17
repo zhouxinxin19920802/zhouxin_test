@@ -29,8 +29,8 @@
 
 ![git diff](https://img-blog.csdnimg.cn/82f1c6be20634c69a4a52027be3e5b0b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5ZCO5Y6C5p2R6Lev6JSh5b6Q5Z2k,size_8,color_FFFFFF,t_70,g_se,x_16)
 
--2,5：终端所展示的文本，在旧文件中，所处于第2~5行
-+2,6：终端所展示的文本，在新文件中，所处于第2~6行
+-2,5：终端所展示的文本，在旧文件中，所处于第2到5行
++2,6：终端所展示的文本，在新文件中，所处于第2到6行
 
 对于每个修改的文件，你可以查看文件的差异，并显示行级别的代码更改。这包括被添加的行（绿色）、被删除的行（红色）以及被修改的行（黄色）。
 
