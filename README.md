@@ -25,6 +25,15 @@
 
 2.6 git stash是必要的，因为开发本地开发的时候，是不确定远程基底是否发生更改的，但此时本地的开发的的代码又不可能放弃掉，因此需要用git stash存起来，先解决冲突将本地更新和远程一样，再进一步将stash的代码和本地代码合并。然后再进行push.
 
+2.7 git diff 返回的@@- ,+ @@的含义,以@@ -2,5 +2,6 @@的含义:
+
+![git diff](https://img-blog.csdnimg.cn/82f1c6be20634c69a4a52027be3e5b0b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5ZCO5Y6C5p2R6Lev6JSh5b6Q5Z2k,size_8,color_FFFFFF,t_70,g_se,x_16)
+
+-2,5：终端所展示的文本，在旧文件中，所处于第2~5行
++2,6：终端所展示的文本，在新文件中，所处于第2~6行
+
+对于每个修改的文件，你可以查看文件的差异，并显示行级别的代码更改。这包括被添加的行（绿色）、被删除的行（红色）以及被修改的行（黄色）。
+
 # 3 git出现冲突的情况
 Git 通常在以下情况下会出现冲突：
 
