@@ -7,7 +7,7 @@
   * git fetch git reset --hard origin/master 
      - 使用场景：自己多台设备之间同步，由于仓库内可能有一些非git可以比较差异的内容，如anylogic的数据，当在另一台设备中进行了仿真，改变了数据，git pull会失败，此时就必须用远程仓库强制覆盖本地仓库。首先进行git fetch获取远程仓库，然后git checkout 本地分支，执行git reset --hard origin/master，就可用远程分支强制覆盖本地分支。
   * git pull git push
-     - push之前要首先git pull获取远程仓库最新更新，进行合并或冲突解决，再进行远程推送git push。
+     - push之前要首先git pull获取远程仓库最新更新，进行合并或冲突解决，再进行远程推送git push，其中git pull之前要进行git add和git push否则会出现over written的问题。那么只能用git reset放弃修改或者git stash暂存修改。
 
 # 2.常用github用法
 ----------
@@ -21,5 +21,43 @@
 
 2.4 特别注意 **?** 的使用，**?** 可以快速调出快捷键的使用帮助。
 
-# 3.github学习资料
-3.1 [github漫游指南](https://github.phodal.com/#/chapter/Github%E6%BC%AB%E6%B8%B8%E6%8C%87%E5%8D%97)
+2.5 sync fork命令, 对于一个forked的项目，进入自己仓库的fork的项目中，点击sync fork，可与原项目保持同步，从而阅读最新状态的项目。
+
+2.6 git stash是必要的，因为开发本地开发的时候，是不确定远程基底是否发生更改的，但此时本地的开发的的代码又不可能放弃掉，因此需要用git stash存起来，先解决冲突将本地更新和远程一样，再进一步将stash的代码和本地代码合并。然后再进行push.
+
+2.7 git diff 返回的@@- ,+ @@的含义,以@@ -2,5 +2,6 @@的含义:
+
+![git diff](https://img-blog.csdnimg.cn/82f1c6be20634c69a4a52027be3e5b0b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5ZCO5Y6C5p2R6Lev6JSh5b6Q5Z2k,size_8,color_FFFFFF,t_70,g_se,x_16)
+
+-2,5：终端所展示的文本，在旧文件中，所处于第2到5行
++2,6：终端所展示的文本，在新文件中，所处于第2到6行
+
+对于每个修改的文件，你可以查看文件的差异，并显示行级别的代码更改。这包括被添加的行（绿色）、被删除的行（红色）以及被修改的行（黄色）。
+
+# 3 git出现冲突的情况
+Git 通常在以下情况下会出现冲突：
+
+1.合并分支时：当你试图将一个分支合并到另一个分支时，如果两个分支都修改了同一个文件的相同部分，就会出现冲突。提交代码时：当两个或多个人同时在同一个文件的相同部分进行修改并尝试提交代码时，就会出现冲突。
+
+2.重命名或移动文件时：如果你重命名或移动一个文件，而其他人也对该文件进行了修改，就会出现冲突。
+
+3.同时修改多个文件时：如果多个人在同一时间对同一个文件夹中的多个文件进行修改，就会出现冲突。
+
+4.本地工作区存在未暂存的修改时，git pull也会报错，因为git pull会同时更新版本库和工作区，工作区未暂存或者提交的话，工作区会被覆盖，因此会报错，报错的提示为:
+>error: Your local changes to the following files would be overwritten by merge:pom.xml,Please commit your changes or stash them before you merge.
+
+>    <<<<<<< ======= >>>>>>>
+
+>    <<<<<<<和=======之间的所有内容都是你的本地修改。 这些修改还没有在远程版本库中。=======和>>>>>>>之间的所有行都是来自远程版本库或另一个分支的修改。
+
+> 可以看出冲突往往发生在不同分支上，或者同一分支不同操作
+> * 不同分支的情况，例如原来版本为a，A拉取修改a+b变成了c,此时分支C, B拉取a+d变成了e，此时分支为D，此时分支C和D合并就会出现冲突，因为基底已经发生了变化
+> * 想同分支的情况，例如原来版本为a，A拉取修改a+b变成了c，B拉取a+d变成了e，B上传，需要首先进行
+
+，因为基底发生了变化，所以会发生冲突
+> ---------------------------
+> 冲突的根本在于基底发生了变化，所以单人单分支操作的话，往往是不会发生冲突的
+> 如果当前分支的每一个提交(commit)都已经存在另一个分支里了，git 就会执行一个“快速向前”(fast forward)操作,git 不创建任何新的提交(commit)，只是将当前分支指向合并进来的分支
+
+# 4.github学习资料
+4.1 [github漫游指南](https://github.phodal.com/#/chapter/Github%E6%BC%AB%E6%B8%B8%E6%8C%87%E5%8D%97)
