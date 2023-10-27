@@ -72,7 +72,6 @@ PyMODINIT_FUNC PyInit_example(void) {
 然后通过:
 ``` shell
 gcc -shared -o example.so example.c -I /usr/include/python3.x/
-
 ```
 编译成功后，将生成一个名为example.so的共享库文件，导入即可使用。
 
@@ -81,7 +80,7 @@ gcc -shared -o example.so example.c -I /usr/include/python3.x/
 pip install gym==0.20.0 -i https://pypi.douban.com/simple
 pip install pyglet==1.5.27
 
-通过网站下载包:
+通过网站搜索包下载:
 https://www.lfd.uci.edu/~gohlke/pythonlibs/
 
 常用的python下载源:
@@ -96,5 +95,18 @@ http://pypi.douban.com/simple/
 
 python官方下载源
 https://pypi.org/
+
+查看python所有的环境
+conda info --env
 ```
+
+
+
+gym环境从0.21到的0.26的变化
+
+https://gymnasium.farama.org/content/migration-guide/
+
+gym 0.26教程
+
+https://www.gymlibrary.dev/content/basic_usage/
 

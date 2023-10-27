@@ -528,7 +528,7 @@ x ˙ \dot{x} ：小车速度（cart velocity）
 
 
 $$
-H ( p , q ) = − ∑ i P ( i ) log ⁡ Q ( i ) H\left( {p,q} \right) = - \sum\limits_i {P\left( i \right)\log Q\left( i \right)} 
+H ( p , q ) = − ∑ i P ( i ) log ⁡ Q ( i ) H\left( {p,q} \right) = - \sum\limits_i {P\left( i \right)\log Q\left( i \right)} 
 $$
 
 
@@ -597,3 +597,9 @@ $$
 2.逃跑模型
 
    
+
+
+
+
+
+![无人集群](http://www.81.cn/pl_208541/jdt_208542/_attachment/2020/08/25/9889510_174248c65df98895101378.jpg)
