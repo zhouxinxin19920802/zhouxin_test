@@ -1,13 +1,17 @@
+import numpy as np
+import torch as T
 import gym
-env = gym.make("LunarLander-v2", render_mode="human")
-env.action_space.seed(42)
+from gym.spaces import Box, Discrete, Dict, Tuple, MultiBinary, MultiDiscrete,Sequence
+from  gym.spaces.utils import  flatdim
+# space = Dict({"position": Discrete(2), "velocity": Discrete(3)})
+# print(flatdim(space))
 
-observation, info = env.reset(seed=42)
+# state = np.array([])
+# a = np.array([1,2,3,4])
+# b = np.array([1,2,5,4])
+# cons = np.concatenate([state,a])
+# cons = np.concatenate([cons,b])
+# print(cons)
 
-for _ in range(1000):
-    observation, reward, terminated, truncated, info = env.step(env.action_space.sample())
-
-    if terminated or truncated:
-        observation, info = env.reset()
-
-env.close()
+cons = T.rand(5)
+print(cons)

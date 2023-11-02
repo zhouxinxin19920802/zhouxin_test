@@ -110,3 +110,26 @@ gym 0.26教程
 
 https://www.gymlibrary.dev/content/basic_usage/
 
+
+
+#### 3.  numpy pytorch的一些用法
+
+.view(1,-1) 是拉成一行，并且会加一个[]，变成一个二维[[]]
+
+
+
+tensor的item()函数，只有一个元素时可以取里面的元素
+
+```python
+import torch
+
+# 创建一个张量，包含一个单独的元素
+x = torch.tensor([42])
+
+# 使用item()函数提取元素
+element = x.item()
+
+print(element)  # 这将打印出 42，一个Python整数
+
+```
+

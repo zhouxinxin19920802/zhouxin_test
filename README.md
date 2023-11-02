@@ -40,6 +40,10 @@
 
 2.9 git reset将会从暂存区撤回
 
+2.10 当新建分支，第一次上传push时，要执行
+     git push --set-upstream origin v1
+     通过 --set-upstream origin v1 来在远程github建立分支
+
 # 3 git出现冲突的情况
 Git 通常在以下情况下会出现冲突：
 
