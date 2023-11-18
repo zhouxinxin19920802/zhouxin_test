@@ -602,4 +602,29 @@ $$
 
 
 
-![无人集群](http://www.81.cn/pl_208541/jdt_208542/_attachment/2020/08/25/9889510_174248c65df98895101378.jpg)
+
+
+2023年11月14日10:21:32:
+
+maddpg算法的地址:
+
+1. reinforc_couzin
+
+​       E:\zhouxin\reinforce_couzin
+
+2. Maddpg包括maddpg tensorflow版本，pytorch版本，多粒子环境
+
+​      E:\zhouxin\test\maddpg
+
+
+
+三个问题:
+
+1.average score 520的问题，单个个体到达的奖励为50，所以
+
+2.到达终点大规模奖励
+
+3.步长怎么设置，要设多长？
+
+在原始的Maddpg算法中，其中包含了两种角色:
+
