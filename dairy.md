@@ -628,3 +628,23 @@ maddpg算法的地址:
 
 在原始的Maddpg算法中，其中包含了两种角色:
 
+
+
+Gpu版本的pytorch安装
+
+```
+pip install torch==1.13.0+cu116 torchvision==0.14.0+cu116 torchaudio==0.13.0 -f https://download.pytorch.org/whl/cu116/torch_stable.html
+```
+
+Cpu版本的pytorch安装
+
+```
+pip install torch==1.13.0+cpu torchvision==0.14.0+cpu torchaudio==0.13.0 -f https://download.pytorch.org/whl/cpu/torch_stable.html
+```
+
+记住pytorch安装的一个关键网址：
+
+```
+https://download.pytorch.org/
+```
+
