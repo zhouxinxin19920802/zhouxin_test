@@ -53,6 +53,24 @@ git push --tags
 
 ​	第一行是用来创建tag，第二行是用来提交tag
 
+2.12  当git文件夹中将其它模块视为子系统模块，github中显示带箭头的白色文件夹不能代开
+
+```shell
+1、删除文件夹里面的.git文件夹
+
+2、执行git rm --cached [文件夹名]
+
+3、执行git add [文件夹名]
+
+4、执行git commit -m "msg"
+
+5、执行git push origin [branch_name] 
+```
+
+
+
+
+
 # 3 git出现冲突的情况
 
 Git 通常在以下情况下会出现冲突：
