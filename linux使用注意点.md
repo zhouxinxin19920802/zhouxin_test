@@ -20,7 +20,7 @@ dpkg --get-slections | grep linux
 
 比较不同版本的，安装新版本对应的包
 
-** 3. ubuntu显卡安装教程 **
+3. **ubuntu显卡安装教程**
 ```
  a. 禁用系统默认显卡驱动
     sudo gedit /etc/modprobe.d/blacklist.conf
