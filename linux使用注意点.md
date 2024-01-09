@@ -43,7 +43,7 @@ dpkg --get-slections | grep linux
  e. 在nvidia官网下载启动
     chmod u+x NVIDIA-Linux-x86_64-535.146.02.run
     ./chmod u+x NVIDIA-Linux-x86_64-535.146.02.run
-  ```
+  
     1.The distribution-provided pre-install script failed! Are you sure you want to continue? 
 
     “Yes”
@@ -56,10 +56,10 @@ dpkg --get-slections | grep linux
 
     “No”
 
-    4.Would you like to run the nvidia-xconfigutility to automatically update your x configuration so that the NVIDIA x driver will be used when you restart x? Any pre-  existing x confile will be backed up. 
+    4.Would you like to run the nvidia-xconfigutility to automatically update your x configuration so that the NVIDIA x driver will be used when you restart x? Any pre-   existing x confile will be backed up. 
 
     “Yes”
-  ```
+ 
  f. 挂载NVIDIA驱动
     modprobe nvidia
  g. 测试,回到图形界面
