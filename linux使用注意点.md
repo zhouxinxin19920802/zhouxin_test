@@ -60,9 +60,9 @@ dpkg --get-slections | grep linux
 
     “Yes”
   ```
-f.挂载NVIDIA驱动
-  modprobe nvidia
-g.测试,回到图形界面
-  sudo nvidia-smi
-  sudo reboot now 
+ f. 挂载NVIDIA驱动
+    modprobe nvidia
+ g. 测试,回到图形界面
+    sudo nvidia-smi
+    sudo reboot now 
 ```
