@@ -25,6 +25,29 @@
 
 2.6 git stash是必要的，因为开发本地开发的时候，是不确定远程基底是否发生更改的，但此时本地的开发的的代码又不可能放弃掉，因此需要用git stash存起来，先解决冲突将本地更新和远程一样，再进一步将stash的代码和本地代码合并。然后再进行push.
 
+```shell
+1.查看已存储的 stash 列表
+git stash list
+2.应用stash(不删除)
+	只有一个stash记录
+	git stash apply
+    如果存在有多个 stash 记录，可以选择应用特定的 stash 记录	
+    git stash apply stash@{n}
+3.应用stash(删除)
+    只有一个stash记录     
+	git stash pop
+	如果你有多个 stash 记录，可以选择应用特定的 stash 记录
+	git stash pop stash@{n}
+
+4. 删除stash记录
+   删除特定记录
+   git stash drop stash@{n}
+   删除所有stash记录
+   git stash clear 
+```
+
+
+
 2.7 git diff 返回的@@- ,+ @@的含义,以@@ -2,5 +2,6 @@的含义:
 
 ![git diff](https://img-blog.csdnimg.cn/82f1c6be20634c69a4a52027be3e5b0b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5ZCO5Y6C5p2R6Lev6JSh5b6Q5Z2k,size_8,color_FFFFFF,t_70,g_se,x_16)
@@ -68,6 +91,44 @@ git push --tags
 ```
 
 
+
+2.13 git checkout .
+
+用于取消对工作目录中所有修改的更改。具体而言，它会将工作目录中所有文件的更改还原到最后一次提交的状态。
+
+
+
+2.14 git checkout . 和 git reset --hard区别
+
+`git checkout .` 和 `git reset --hard` 都可以用于丢弃工作目录中的修改，但它们的实现方式和影响略有不同：
+
+a.**git checkout .:**
+
+- 用于取消工作目录中所有已修改的文件。
+- 不会影响已经添加到暂存区的文件。
+- 不会修改当前分支的指针位置，也就是说，不会影响提交历史。
+
+```shell
+git checkout .
+```
+
+b. **git reset --hard:**
+
+- 可以用于重置当前分支的 HEAD、暂存区和工作目录。
+- 将当前分支的 HEAD 移动到指定的提交，暂存区也会被重置为该提交，工作目录的文件会被替换为该提交的版本。
+- 会丢弃所有的本地修改，包括已暂存和未暂存的。
+
+```
+git reset --hard HEAD
+```
+
+总的来说，如果你只是想取消工作目录中的修改而不影响提交历史，可以使用 `git checkout .`。如果需要完全重置工作目录、暂存区和提交历史，包括已提交的内容，可以使用 `git reset --hard`。请谨慎使用 `git reset --hard`，因为它会永久性地删除未提交的本地修改和已提交的历史
+
+
+
+2.15 git reset --hard真正危险的地方
+
+`git reset --hard` 会修改分支指针和提交历史，将分支指针移动到指定的提交，并删除该提交之后的所有提交。这可能会改变分支的历史。比如提交历史a,b,c,d,e,f 当git reset --hard 到提交点c时会把d,e,f都删掉。
 
 
 
