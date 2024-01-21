@@ -84,4 +84,4 @@ main_frame.setLayout(layout)
 
    pyqt中widget中类的关系
 
-   ![pyqt_widgets](.\img\pytqt_widgets.webp)
+   ![pyqt_widgets](./img/pytqt_widgets.webp)
