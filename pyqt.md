@@ -73,3 +73,15 @@ main_frame.setLayout(layout)
    ```
 
    在这个例子中，`central_widget` 被设置为应用程序主窗口的中央部件。它将占据主窗口的中央区域，用于放置其他控件。
+
+
+
+7. QtWidgets(学习最主要要学习的模块）
+
+   QtWidgets模块：是PyQt5中最常用和最重要的模块，提供了一系列用户界面控件，如按钮、文本框、标签、表格、菜单、滚动条等。开发者可以利用这些控件快速构建用户界面。
+
+   QWidget是QtWidgets中最主要的类，是gui控件的集合。
+
+   pyqt中widget中类的关系
+
+   ![pyqt_widgets](img\pytqt_widgets.webp)
