@@ -13,17 +13,17 @@
 ----------
 ![github快捷键](https://img-blog.csdnimg.cn/d1e55767a7fa432c9d721dbe54b07851.png)
 
-2.1 在项目里.可以直接打开编辑器,T可以快速查找文件，L可以快速定位行,B可以快速查看源码修改记录。
+**2.1** 在项目里.可以直接打开编辑器,T可以快速查找文件，L可以快速定位行,B可以快速查看源码修改记录。
 
-2.2 在项目中，项目地址前加"https://gitpod.io/#/" + 项目地址可以调用在线编辑器运行。
+**2.2** 在项目中，项目地址前加"https://gitpod.io/#/" + 项目地址可以调用在线编辑器运行。
 
-2.3 **.gitattibute**是一个文本文件，它用于给git仓库中的不同文件或路径指定属性。.gitattributes 文件中的每个属性由一个或多个行组成，每行指定一个或多个文件或路径及其相应的属性。文件可以被放置在 Git 存储库的任何目录中，Git 会自动递归地查找它并将其应用于该目录及其子目录中的所有文件。
+**2.3** **.gitattibute**是一个文本文件，它用于给git仓库中的不同文件或路径指定属性。.gitattributes 文件中的每个属性由一个或多个行组成，每行指定一个或多个文件或路径及其相应的属性。文件可以被放置在 Git 存储库的任何目录中，Git 会自动递归地查找它并将其应用于该目录及其子目录中的所有文件。
 
-2.4 特别注意 **?** 的使用，**?** 可以快速调出快捷键的使用帮助。
+**2.4** 特别注意 **?** 的使用，**?** 可以快速调出快捷键的使用帮助。
 
-2.5 sync fork命令, 对于一个forked的项目，进入自己仓库的fork的项目中，点击sync fork，可与原项目保持同步，从而阅读最新状态的项目。
+**2.5** sync fork命令, 对于一个forked的项目，进入自己仓库的fork的项目中，点击sync fork，可与原项目保持同步，从而阅读最新状态的项目。
 
-2.6 git stash是必要的，因为开发本地开发的时候，是不确定远程基底是否发生更改的，但此时本地的开发的的代码又不可能放弃掉，因此需要用git stash存起来，先解决冲突将本地更新和远程一样，再进一步将stash的代码和本地代码合并。然后再进行push.
+**2.6** git stash是必要的，因为开发本地开发的时候，是不确定远程基底是否发生更改的，但此时本地的开发的的代码又不可能放弃掉，因此需要用git stash存起来，先解决冲突将本地更新和远程一样，再进一步将stash的代码和本地代码合并。然后再进行push.
 
 ```shell
 1.查看已存储的 stash 列表
@@ -48,7 +48,7 @@ git stash list
 
 
 
-2.7 git diff 返回的@@- ,+ @@的含义,以@@ -2,5 +2,6 @@的含义:
+**2.7** git diff 返回的@@- ,+ @@的含义,以@@ -2,5 +2,6 @@的含义:
 
 ![git diff](https://img-blog.csdnimg.cn/82f1c6be20634c69a4a52027be3e5b0b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5ZCO5Y6C5p2R6Lev6JSh5b6Q5Z2k,size_8,color_FFFFFF,t_70,g_se,x_16)
 
@@ -57,17 +57,17 @@ git stash list
 
 对于每个修改的文件，你可以查看文件的差异，并显示行级别的代码更改。这包括被添加的行（绿色）、被删除的行（红色）以及被修改的行（黄色）。
 
-2.8 git rm --cache 1.txt 从暂存区删除
+**2.8** git rm --cache 1.txt 从暂存区删除
     1.txt 未提交的更改，更改会被丢弃
     1.txt 已经至暂存区，则会将最后一次暂存区的文件还原到工作区
 
-2.9 git reset将会从暂存区撤回
+**2.9** git reset将会从暂存区撤回
 
-2.10 当新建分支，第一次上传push时，要执行
+**2.10** 当新建分支，第一次上传push时，要执行
      git push --set-upstream origin v1
      通过 --set-upstream origin v1 来在远程github建立分支
 
-2.11 tags的应用
+**2.11** tags的应用
 
 ```bash
 git tag v1.0
@@ -76,7 +76,7 @@ git push --tags
 
 ​	第一行是用来创建tag，第二行是用来提交tag
 
-2.12  当git文件夹中将其它模块视为子系统模块，github中显示带箭头的白色文件夹不能代开
+**2.12**  当git文件夹中将其它模块视为子系统模块，github中显示带箭头的白色文件夹不能代开
 
 ```shell
 1、删除文件夹里面的.git文件夹
@@ -92,7 +92,7 @@ git push --tags
 
 
 
-2.13 git checkout .
+**2.13** git checkout .
 
 用于取消对工作目录中所有修改的更改。具体而言，它会将工作目录中所有文件的更改还原到最后一次提交的状态。
 
@@ -126,9 +126,21 @@ git reset --hard HEAD
 
 
 
-2.15 git reset --hard真正危险的地方
+**2.15** git reset --hard真正危险的地方
 
 `git reset --hard` 会修改分支指针和提交历史，将分支指针移动到指定的提交，并删除该提交之后的所有提交。这可能会改变分支的历史。比如提交历史a,b,c,d,e,f 当git reset --hard 到提交点c时会把d,e,f都删掉。
+
+
+
+**2.16** 用远程分支强制覆盖本地分支
+
+```shell
+git checkout main
+git fetch
+git reset --hard origin/main
+```
+
+
 
 
 
