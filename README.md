@@ -142,6 +142,29 @@ git reset --hard origin/main
 
 
 
+**2.17 给本地的仓库添加远程仓库**
+
+```shell
+初始本地仓库
+git init
+
+添加远程仓库
+git remote add origin https://github.com/username/repository.git
+
+查看远程仓库
+git remote -v
+
+推送代码到远程仓库
+git push origin master
+
+更改远程仓库URL
+git remote set-url origin https://github.com/username/new-repository.git
+```
+
+
+
+
+
 
 
 # 3 git出现冲突的情况
