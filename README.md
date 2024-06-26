@@ -161,7 +161,34 @@ git push origin master
 git remote set-url origin https://github.com/username/new-repository.git
 ```
 
+**2.18 查看历史提交**
 
+方法一:创建临时分支
+
+```shell
+查看历史提交
+git log
+
+切换到特定提交并创建临时分支
+git checkout -b temp-branch <commit-hash>
+
+查看完毕后删除临时分支并切换回原分支
+git checkout <branch-name>
+git branch -d temp-branch
+```
+
+方法二：使用 `git checkout` 切换到提交并返回到分支
+
+```shell
+查看历史提交
+git log
+
+切换到特定提交并创建临时分支
+git checkout <commit-hash>
+
+查看完毕后删除临时分支并切换回原分支
+git checkout <branch-name>
+```
 
 
 
