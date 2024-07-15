@@ -33,13 +33,6 @@ C.修改什么文件，如何进行修改？
     #DEPENDENCIES后面指定生成msg需要依赖其他什么消息，由于gps.msg用到了float32这种ROS标准消息，因此需
     要再把std_msgs作为依赖
 
-```
-``` 
-    package.xml
-    -----------------------------------------------
-    <build_depend>message_generation</build_depend>
-    <run_depend>message_runtime</run_depend>
-    -----------------------------------------------
 
     运行python脚本，最后需要添加这个
     -----------------------------------------------
@@ -49,6 +42,16 @@ C.修改什么文件，如何进行修改？
         DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
     )
     -----------------------------------------------
+
+```
+``` 
+    package.xml
+    -----------------------------------------------
+    <build_depend>message_generation</build_depend>
+    <run_depend>message_runtime</run_depend>
+    -----------------------------------------------
+
+
 
 ```
 
