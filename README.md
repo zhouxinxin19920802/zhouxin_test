@@ -189,6 +189,30 @@ git checkout <commit-hash>
 查看完毕后删除临时分支并切换回原分支
 git checkout <branch-name>
 ```
+2.19
+
+fatal: refusing to merge unrelated histories 错误通常在你试图将两个没有共同历史的独立 Git 仓库合并时出现。这个问题通常出现在以下情况下：
+
+1.你在一个已经存在的远程仓库中初始化了一个新的本地仓库并试图推送。
+
+2.你在本地和远程分别创建了不同的初始提交。
+```
+合并不同历史
+git pull origin main --allow-unrelated-histories
+# 解决冲突并提交
+git add .
+git commit -m "Merge unrelated histories"
+git push origin main
+或者
+重新初始化本地仓库并推送，初始化本地仓库，进行远程覆盖
+rm -rf .git
+git init
+git remote add origin https://github.com/zhouxinxin19920802/Couzin_ros_test.git
+git add .
+git commit -m "Initial commit"
+git push -u origin main --force
+
+```
 
 
 
